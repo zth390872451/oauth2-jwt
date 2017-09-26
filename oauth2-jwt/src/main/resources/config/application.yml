@@ -1,0 +1,48 @@
+# spring.profiles.active: dev #开启开发环境  # 配置在 parent pom文件中
+---
+spring:
+  application:
+    name: umeox-oauth2
+server:
+  context-path: /oauth2  #then access  http://localhost:8080/api
+  port: 6060
+#management:
+#  context-path: /admin #then access health http://localhost:9091/admin/health
+#  port: 9090
+---
+#security:
+#    user:
+#      password: password
+---
+#异步执行线程池配置
+async: 
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+---    
+#endpoints:
+#  health:
+#    enabled: yes
+#  shutdown:
+#    enabled: yes
+---
+#mongodb:
+#  host: conexion
+#  port: 27017
+#  databaseName: abc
+  #uri: conexion
+---
+#spring:
+#    mail:
+#        host: localhost
+#        port: 25
+#        user:
+#        password:
+#        protocol: smtp
+#        tls: false
+#        auth: false
+#        from: jiangtao@shouwang100.com
+#    messageSource:
+#        cacheSeconds: 1
+---
+debug: true
